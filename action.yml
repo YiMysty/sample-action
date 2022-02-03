@@ -17,6 +17,6 @@ runs:
         echo The version of this action is "$GITHUB_ACTION_REF"
       shell: bash
     - run: |
-        v=$(jq ".action_ref" < ${{GITHUB_EVENT_PATH}})
+        v=$(jq ".action_ref" < $GITHUB_EVENT_PATH)
         echo The version of this action is "$v"
       shell: bash
