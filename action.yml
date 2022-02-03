@@ -1,5 +1,10 @@
 name: 'sample-action'
 description: 'A sample action.'
+inputs:
+  tag:
+    description: 'tag'
+    required: false
+    default: ${{ github.action_ref }}
 runs:
   using: 'docker'
-  image: ${{ github.action_ref }}
+  image: 'bla'
