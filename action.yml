@@ -18,3 +18,6 @@ runs:
     - run: |
         echo The version of this action is "${{ github.action_ref }}"
       shell: bash
+    - run: |
+        echo The version of this action is "$GITHUB_ACTION_REF"
+      shell: bash
