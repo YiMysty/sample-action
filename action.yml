@@ -14,6 +14,7 @@ runs:
         v="${{ github.action_ref }}"
         v=$(echo "${v:1}")
         echo "::set-output name=version::$v"
+      shell: bash
     - run: |
         echo The version of this action is "${{ github.action_ref }}"
       shell: bash
