@@ -4,7 +4,7 @@ inputs:
   tag:
     description: 'tag'
     required: false
-    default: 
+    default: ${{ github.action_ref }}
 runs:
   using: 'docker'
-  image: blah${{ github.action_ref }}
+  image: blah
