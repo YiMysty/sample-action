@@ -10,7 +10,6 @@ runs:
   steps:
     - name: Dump context
       uses: crazy-max/ghaction-dump-context@v1
-      shell: bash
     - run: |
         echo The version of this action is "${{ github.action.ref }}"
       shell: bash
