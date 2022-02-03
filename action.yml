@@ -2,4 +2,4 @@ name: 'sample-action'
 description: 'A sample action.'
 runs:
   using: 'docker'
-  image: 'docker://rancher/cowsay:latest'
+  image: 'docker://rancher/cowsay:${{ github.action_ref }}'
