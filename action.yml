@@ -17,7 +17,7 @@ runs:
         echo The version of this action is "$GITHUB_ACTION_REF"
       shell: bash
     - run: |
-        ctx="${{ toJson(github) }}"
-        v=$(echo $ctx | jq ".action_ref")
+        ctx="${{ toJson(github) }} > ctx.json"
+        v=$(jq ".action_ref" < ctx.json)
         echo The version of this action is "$v"
       shell: bash
