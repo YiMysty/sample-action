@@ -11,5 +11,5 @@ runs:
     - name: Dump context
       uses: crazy-max/ghaction-dump-context@v1
     - run: |
-        echo The version of this action is "${{ github.ref_name }}"
+        echo The version of this action is "${{ github.action_ref }}"
       shell: bash
