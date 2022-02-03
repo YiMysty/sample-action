@@ -17,8 +17,7 @@ runs:
         echo The version of this action is "$GITHUB_ACTION_REF"
       shell: bash
     - run: |
-        echo $GITHUB_EVENT_PATH
-        cat $GITHUB_EVENT_PATH
-        v=$(jq '.action_ref' < $GITHUB_EVENT_PATH)
+        echo '${{ toJson(github) }}' > github.json
+        v=$(jq '.action_ref' < github.json)
         echo The version of this action is "$v"
       shell: bash
