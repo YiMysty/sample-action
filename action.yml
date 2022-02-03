@@ -7,4 +7,4 @@ inputs:
     default: ${{ github.action_ref }}
 runs:
   using: 'docker'
-  image: blah
+  image: ${{ inputs.tag.default }}
