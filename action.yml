@@ -7,4 +7,4 @@ inputs:
     default: ${{ github.action_ref }}
 runs:
   using: 'docker'
-  image: ${{ join('bla', inputs.tag) }}
+  image: blah${{ input.tags }}
