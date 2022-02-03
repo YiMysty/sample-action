@@ -8,8 +8,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Dump context
-      uses: crazy-max/ghaction-dump-context@v1
+    # - name: Dump context
+    #   uses: crazy-max/ghaction-dump-context@v1
     - run: |
-        echo My version is "${{ github.action_ref }}"
+        echo The version of this action is "${{ github.ref_name }}"
       shell: bash
