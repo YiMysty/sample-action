@@ -1,23 +1,5 @@
 name: 'sample-action'
 description: 'A sample action.'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
 runs:
-  using: "composite"
-  steps:
-    - name: Dump context
-      uses: crazy-max/ghaction-dump-context@v1
-    - run: |
-        echo The version of this action is "${{ github.action.ref }}"
-      shell: bash
-    - run: |
-        echo The version of this action is "$GITHUB_ACTION_REF"
-      shell: bash
-    - run: |
-        echo '${{ toJson(github) }}' > github.json
-        v=$(jq '.action_ref' < github.json)
-        echo The version of this action is "$v"
-      shell: bash
+  using: 'docker'
+  image: 'docker://rancher/cowsay:latest'
